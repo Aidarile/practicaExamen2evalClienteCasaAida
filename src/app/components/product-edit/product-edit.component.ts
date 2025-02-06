@@ -48,13 +48,13 @@ export class ProductEditComponent implements OnInit {
   load: boolean = false;
 
    /* GETTERS */
-   get title() { return this.formProduct.get('title'); }
-   get price() { return this.formProduct.get('price'); }
-   get description() { return this.formProduct.get('description'); }
-   get category() { return this.formProduct.get('category'); }
-   get image() { return this.formProduct.get('image'); }
-   get rate() { return this.formProduct.get('rating.rate'); }
-   get count() { return this.formProduct.get('rating.count'); }
+   get title():any { return this.formProduct.get('title'); }
+   get price():any { return this.formProduct.get('price'); }
+   get description():any { return this.formProduct.get('description'); }
+   get category():any { return this.formProduct.get('category'); }
+   get image():any { return this.formProduct.get('image'); }
+   get rate():any { return this.formProduct.get('rating.rate'); }
+   get count():any { return this.formProduct.get('rating.count'); }
 
 
     ngOnInit(): void {

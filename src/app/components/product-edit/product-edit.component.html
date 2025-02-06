@@ -13,9 +13,9 @@
                     id="title" formControlName="title"
                     placeholder="title">
                     <label for="title">Title</label>
-                    @if (title?.invalid && (title?.dirty || title?.touched)) {
+                    @if (title.invalid && (title.dirty || title.touched)) {
                         <div class="alert alert-danger">
-                            @if (title?.errors['required']) {
+                            @if (title.errors['required']) {
                                 <p>Title is required</p>
                             }
                         </div>
@@ -57,7 +57,7 @@
                     <label for="category">Category</label>
                     @if (category?.invalid && (category?.dirty || category?.touched)) {
                         <div class="alert alert-danger">
-                            @if (category.errors['required']) {
+                            @if (category?.errors['required']) {
                                 <p>Category is required</p>
                             }
                         </div>
