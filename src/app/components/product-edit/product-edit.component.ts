@@ -7,6 +7,7 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons/faCartShopping
 import { faEdit } from '@fortawesome/free-solid-svg-icons/faEdit';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons/faTrashCan';
 import { NgbToast } from '@ng-bootstrap/ng-bootstrap'
+import { Product } from '../../common/interface';
 
 @Component({
   selector: 'app-product-edit',
@@ -15,7 +16,6 @@ import { NgbToast } from '@ng-bootstrap/ng-bootstrap'
   styleUrl: './product-edit.component.css'
 })
 export class ProductEditComponent implements OnInit {
-  
 
   private readonly productService : ProductService = inject(ProductService);
   private readonly formBuilder: FormBuilder = inject(FormBuilder);
@@ -127,5 +127,6 @@ export class ProductEditComponent implements OnInit {
     protected readonly faCartShopping = faCartShopping;
     protected readonly faEdit = faEdit;
     protected readonly faTrashCan = faTrashCan;
+
 
 }

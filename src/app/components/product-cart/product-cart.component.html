@@ -1,5 +1,18 @@
 <div class="container mt-10">
-    <div class="mt-5">
-        <div class="mt-5"> cart works </div>
+    <div class="row mt-5 justify-content-center">
+
+        @for (product of productos; track $index) {
+            <div class="col-md-8">
+
+                <h2> {{product.title}} </h2>
+                <p class="text-end text-success"> {{product.price | currency: 'EUR'}} </p>
+            </div>
+        }
+
+        <div class="col-md-8">
+            <h2> TOTAL </h2>
+            <p class="text-end text-success"> {{productPrice | currency: 'EUR'}} </p>
+        </div>
+        
     </div>
 </div>

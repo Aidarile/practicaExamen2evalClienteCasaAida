@@ -8,6 +8,7 @@ import { CurrencyPipe } from '@angular/common';
 import { NgbToast } from '@ng-bootstrap/ng-bootstrap'
 import { RouterLink } from '@angular/router';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons/faTrashCan';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-product-list',
@@ -16,6 +17,9 @@ import { faTrashCan } from '@fortawesome/free-solid-svg-icons/faTrashCan';
   styleUrl: './product-list.component.css'
 })
 export class ProductListComponent {
+
+  private readonly cartService : CartService = inject(CartService);
+
   private readonly productService: ProductService = inject(ProductService);
 
   productList: Product[] = [];
@@ -76,5 +80,9 @@ export class ProductListComponent {
       }
     )
   }
+
+  addToCart(product: Product) {
+    this.cartService.addToCart(product);
+    }
 
 }
